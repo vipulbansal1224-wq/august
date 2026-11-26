@@ -11,15 +11,16 @@ import {
   CheckCircle2,
   Layers,
 } from "lucide-react";
-import { PRODUCTS } from "@/data/catalog";
 import { COMPANY_INFO } from "@/data/company";
 import { useQuote } from "@/context/QuoteContext";
+import { useSiteData } from "@/context/SiteDataContext";
 import ProductCard from "@/components/ProductCard";
 
 export default function ProductDetailPage() {
   const params = useParams();
   const slug = typeof params.slug === "string" ? params.slug : "";
   const { addToQuote } = useQuote();
+  const { products: PRODUCTS } = useSiteData();
 
   const product = PRODUCTS.find((p) => p.slug === slug);
   const [selectedPartNo, setSelectedPartNo] = useState<string | undefined>(

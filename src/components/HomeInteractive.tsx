@@ -16,23 +16,26 @@ import {
   Sparkles,
 } from "lucide-react";
 import { COMPANY_INFO, NAV_MEGA_CATEGORIES } from "@/data/company";
-import { PRODUCTS } from "@/data/catalog";
 import { useQuote } from "@/context/QuoteContext";
+import { useSiteData } from "@/context/SiteDataContext";
 
 export default function HomeInteractive() {
   const { addToQuote } = useQuote();
+  const { products, content } = useSiteData();
 
   // 1. Hero Live Part-Number / Product Finder
   const [heroQuery, setHeroQuery] = useState("");
   const heroMatches = useMemo(() => {
     const q = heroQuery.trim().toLowerCase();
     if (!q) return [];
-    return PRODUCTS.filter(
-      (p) =>
-        p.name.toLowerCase().includes(q) ||
-        p.specRows.some((r) => r.some((c) => c.toLowerCase().includes(q)))
-    ).slice(0, 5);
-  }, [heroQuery]);
+    return products
+      .filter(
+        (p) =>
+          p.name.toLowerCase().includes(q) ||
+          p.specRows.some((r) => r.some((c) => c.toLowerCase().includes(q)))
+      )
+      .slice(0, 5);
+  }, [heroQuery, products]);
 
   // 2. Interactive Category Tab Explorer
   const [activeCatIdx, setActiveCatIdx] = useState(0);
@@ -81,10 +84,10 @@ export default function HomeInteractive() {
 
   const activeCat = categoryTabs[activeCatIdx];
   const activeCatProducts = useMemo(() => {
-    return PRODUCTS.filter((p) =>
-      p.categorySlugs.includes(activeCat.slug)
-    ).slice(0, 3);
-  }, [activeCat.slug]);
+    return products
+      .filter((p) => p.categorySlugs.includes(activeCat.slug))
+      .slice(0, 3);
+  }, [activeCat.slug, products]);
 
   // 3. Interactive Surface Finish Lab
   const [activeFinishIdx, setActiveFinishIdx] = useState(0);
@@ -92,7 +95,8 @@ export default function HomeInteractive() {
 
   // 4. Hero 4-Tile Auto-Rotating Authentic Product & Facility Slider
   const sliderPool = useMemo(() => {
-    const prodSlides = PRODUCTS.filter((p) => Boolean(p.image))
+    const prodSlides = products
+      .filter((p) => Boolean(p.image))
       .slice(0, 16)
       .map((p) => ({
         src: p.image,
@@ -177,23 +181,17 @@ export default function HomeInteractive() {
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-zinc-200 shadow-2xs text-xs font-bold text-zinc-800">
                 <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
-                {COMPANY_INFO.tagline} • EST. {COMPANY_INFO.established}
+                {content.heroTagline}
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-zinc-950 leading-[1.05]">
-                The Strut People.{" "}
-                <span className="text-red-600">Precision</span> Built Beyond
-                Boundaries.
+                {content.heroTitlePrefix}{" "}
+                <span className="text-red-600">{content.heroTitleHighlight}</span>{" "}
+                {content.heroTitleSuffix}
               </h1>
 
               <p className="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-xl">
-                Manufacturers &amp; global exporters of{" "}
-                <span className="font-semibold text-zinc-900">
-                  89+ industrial strut fittings, channel nuts, cantilever arms,
-                  fasteners &amp; clamps
-                </span>
-                . Engineered in Ludhiana for worldwide MEP, HVAC, solar &amp;
-                construction projects.
+                {content.heroSubtitle}
               </p>
 
               {/* Interactive Live Part-Number Finder */}
@@ -705,10 +703,10 @@ export default function HomeInteractive() {
           <div className="space-y-1">
             <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-red-100">
               <ShieldCheck className="w-4 h-4" />
-              Direct Manufacturer Pricing
+              {content.ctaBadge}
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold">
-              Ready to Source Strut Fittings &amp; Fasteners?
+              {content.ctaTitle}
             </h2>
           </div>
           <div className="flex flex-wrap gap-3 shrink-0">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { QuoteProvider } from "@/context/QuoteContext";
+import { SiteDataProvider } from "@/context/SiteDataContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import QuoteDrawer from "@/components/QuoteDrawer";
@@ -35,12 +36,14 @@ export default function RootLayout({
       className={`${plusJakarta.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-white text-slate-900">
-        <QuoteProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <QuoteDrawer />
-        </QuoteProvider>
+        <SiteDataProvider>
+          <QuoteProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <QuoteDrawer />
+          </QuoteProvider>
+        </SiteDataProvider>
       </body>
     </html>
   );

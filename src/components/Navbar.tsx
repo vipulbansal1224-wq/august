@@ -14,13 +14,15 @@ import {
   X,
   ArrowRight,
 } from "lucide-react";
-import { COMPANY_INFO, NAV_MEGA_CATEGORIES } from "@/data/company";
+import { COMPANY_INFO } from "@/data/company";
 import { useQuote } from "@/context/QuoteContext";
+import { useSiteData } from "@/context/SiteDataContext";
 
 export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const { totalItems, setDrawerOpen } = useQuote();
+  const { navMenu, megaCategories, content, products } = useSiteData();
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -51,18 +53,18 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-4 shrink-0">
             <a
-              href={`tel:${COMPANY_INFO.phone}`}
+              href={`tel:${content.phone}`}
               className="inline-flex items-center gap-1.5 hover:text-white transition-colors"
             >
               <Phone className="w-3 h-3 text-red-500" />
-              <span>{COMPANY_INFO.phone}</span>
+              <span>{content.phone}</span>
             </a>
             <a
-              href={`mailto:${COMPANY_INFO.email}`}
+              href={`mailto:${content.email}`}
               className="hidden sm:inline-flex items-center gap-1.5 hover:text-white transition-colors"
             >
               <Mail className="w-3 h-3 text-red-500" />
-              <span>{COMPANY_INFO.email}</span>
+              <span>{content.email}</span>
             </a>
           </div>
         </div>
@@ -82,140 +84,130 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <nav className="hidden lg:flex items-center gap-1">
-            <Link
-              href="/"
-              className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                pathname === "/"
-                  ? "text-white bg-red-600"
-                  : "text-zinc-300 hover:text-white hover:bg-zinc-800/80"
-              }`}
-            >
-              Home
-            </Link>
+            {navMenu.map((item) => {
+              if (item.href === "/products") {
+                return (
+                  <div
+                    key={item.id}
+                    className="relative"
+                    onMouseEnter={() => setMegaOpen(true)}
+                    onMouseLeave={() => setMegaOpen(false)}
+                  >
+                    <Link
+                      href="/products"
+                      className={`inline-flex items-center gap-1 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                        pathname.startsWith("/products")
+                          ? "text-white bg-red-600"
+                          : "text-zinc-300 hover:text-white hover:bg-zinc-800/80"
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          megaOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </Link>
 
-            <Link
-              href="/about-us"
-              className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                pathname === "/about-us"
-                  ? "text-white bg-red-600"
-                  : "text-zinc-300 hover:text-white hover:bg-zinc-800/80"
-              }`}
-            >
-              About Us
-            </Link>
-
-            {/* Products Mega Menu Trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => setMegaOpen(true)}
-              onMouseLeave={() => setMegaOpen(false)}
-            >
-              <Link
-                href="/products"
-                className={`inline-flex items-center gap-1 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                  pathname.startsWith("/products")
-                    ? "text-white bg-red-600"
-                    : "text-zinc-300 hover:text-white hover:bg-zinc-800/80"
-                }`}
-              >
-                Products
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    megaOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </Link>
-
-              {megaOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[720px] z-50 text-zinc-900">
-                  <div className="bg-white rounded-2xl shadow-2xl border border-zinc-200 p-6 grid grid-cols-12 gap-6">
-                    <div className="col-span-5 border-r border-zinc-100 pr-4">
-                      <div className="flex items-center justify-between mb-3">
-                        <Link
-                          href="/products?category=strut-fittings"
-                          onClick={() => setMegaOpen(false)}
-                          className="text-sm font-bold text-zinc-900 hover:text-red-600 flex items-center gap-1"
-                        >
-                          Strut Fittings
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </Link>
-                      </div>
-                      <ul className="grid grid-cols-1 gap-1">
-                        {NAV_MEGA_CATEGORIES[0].subcategories.map((sub) => (
-                          <li key={sub.slug}>
-                            <Link
-                              href={`/products?category=${sub.slug}`}
-                              onClick={() => setMegaOpen(false)}
-                              className="block px-2.5 py-1.5 rounded-md text-xs font-medium text-zinc-600 hover:text-red-600 hover:bg-red-50 transition-colors"
-                            >
-                              {sub.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="col-span-7 grid grid-cols-2 gap-5 content-start">
-                      {NAV_MEGA_CATEGORIES.slice(1).map((cat) => (
-                        <div key={cat.slug}>
-                          <Link
-                            href={`/products?category=${cat.slug}`}
-                            onClick={() => setMegaOpen(false)}
-                            className="text-sm font-bold text-zinc-900 hover:text-red-600 flex items-center gap-1 mb-1"
-                          >
-                            {cat.title}
-                            <ArrowRight className="w-3.5 h-3.5" />
-                          </Link>
-                          <p className="text-[11px] text-zinc-500 mb-2 leading-snug">
-                            {cat.description}
-                          </p>
-                          {cat.subcategories.length > 0 && (
-                            <ul className="space-y-1">
-                              {cat.subcategories.map((sub) => (
+                    {megaOpen && megaCategories.length > 0 && (
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[720px] z-50 text-zinc-900">
+                        <div className="bg-white rounded-2xl shadow-2xl border border-zinc-200 p-6 grid grid-cols-12 gap-6">
+                          <div className="col-span-5 border-r border-zinc-100 pr-4">
+                            <div className="flex items-center justify-between mb-3">
+                              <Link
+                                href={`/products?category=${megaCategories[0].slug}`}
+                                onClick={() => setMegaOpen(false)}
+                                className="text-sm font-bold text-zinc-900 hover:text-red-600 flex items-center gap-1"
+                              >
+                                {megaCategories[0].title}
+                                <ArrowRight className="w-3.5 h-3.5" />
+                              </Link>
+                            </div>
+                            <ul className="grid grid-cols-1 gap-1">
+                              {megaCategories[0].subcategories.map((sub) => (
                                 <li key={sub.slug}>
                                   <Link
                                     href={`/products?category=${sub.slug}`}
                                     onClick={() => setMegaOpen(false)}
-                                    className="block px-2 py-1 rounded-md text-xs font-medium text-zinc-600 hover:text-red-600 hover:bg-red-50 transition-colors"
+                                    className="block px-2.5 py-1.5 rounded-md text-xs font-medium text-zinc-600 hover:text-red-600 hover:bg-red-50 transition-colors"
                                   >
                                     {sub.name}
                                   </Link>
                                 </li>
                               ))}
                             </ul>
-                          )}
+                          </div>
+
+                          <div className="col-span-7 grid grid-cols-2 gap-5 content-start">
+                            {megaCategories.slice(1).map((cat) => (
+                              <div key={cat.slug}>
+                                <Link
+                                  href={`/products?category=${cat.slug}`}
+                                  onClick={() => setMegaOpen(false)}
+                                  className="text-sm font-bold text-zinc-900 hover:text-red-600 flex items-center gap-1 mb-1"
+                                >
+                                  {cat.title}
+                                  <ArrowRight className="w-3.5 h-3.5" />
+                                </Link>
+                                <p className="text-[11px] text-zinc-500 mb-2 leading-snug">
+                                  {cat.description}
+                                </p>
+                                {cat.subcategories.length > 0 && (
+                                  <ul className="space-y-1">
+                                    {cat.subcategories.map((sub) => (
+                                      <li key={sub.slug}>
+                                        <Link
+                                          href={`/products?category=${sub.slug}`}
+                                          onClick={() => setMegaOpen(false)}
+                                          className="block px-2 py-1 rounded-md text-xs font-medium text-zinc-600 hover:text-red-600 hover:bg-red-50 transition-colors"
+                                        >
+                                          {sub.name}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </div>
+                            ))}
+
+                            <div className="col-span-2 mt-2 pt-3 border-t border-zinc-100 flex items-center justify-between">
+                              <span className="text-xs text-zinc-500">
+                                {products.length}+ Precision Products • HDG, BZP &amp; SS316
+                              </span>
+                              <Link
+                                href="/products"
+                                onClick={() => setMegaOpen(false)}
+                                className="text-xs font-bold text-red-600 hover:text-red-700 inline-flex items-center gap-1"
+                              >
+                                View Full Catalog
+                                <ArrowRight className="w-3.5 h-3.5" />
+                              </Link>
+                            </div>
+                          </div>
                         </div>
-                      ))}
-
-                      <div className="col-span-2 mt-2 pt-3 border-t border-zinc-100 flex items-center justify-between">
-                        <span className="text-xs text-zinc-500">
-                          89+ Precision Products • HDG, BZP &amp; SS316
-                        </span>
-                        <Link
-                          href="/products"
-                          onClick={() => setMegaOpen(false)}
-                          className="text-xs font-bold text-red-600 hover:text-red-700 inline-flex items-center gap-1"
-                        >
-                          View Full Catalog
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </Link>
                       </div>
-                    </div>
+                    )}
                   </div>
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="/contact-us"
-              className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-                pathname === "/contact-us"
-                  ? "text-white bg-red-600"
-                  : "text-zinc-300 hover:text-white hover:bg-zinc-800/80"
-              }`}
-            >
-              Contact Us
-            </Link>
+                );
+              }
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
+              return (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                    isActive
+                      ? "text-white bg-red-600"
+                      : "text-zinc-300 hover:text-white hover:bg-zinc-800/80"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right Actions */}
@@ -333,7 +325,7 @@ export default function Navbar() {
               All Products (89)
             </Link>
             <div className="pl-4 py-1 space-y-1 border-l-2 border-red-600 ml-3">
-              {NAV_MEGA_CATEGORIES.map((cat) => (
+              {megaCategories.map((cat) => (
                 <Link
                   key={cat.slug}
                   href={`/products?category=${cat.slug}`}

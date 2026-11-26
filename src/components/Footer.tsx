@@ -152,7 +152,15 @@ export default function Footer() {
             © {new Date().getFullYear()} {COMPANY_INFO.legalName} All rights
             reserved.
           </p>
-          <p>Manufacturers &amp; Exporters of Strut Accessories &amp; Fasteners</p>
+          <div className="flex items-center gap-4">
+            <span>Manufacturers &amp; Exporters of Strut Accessories &amp; Fasteners</span>
+            <Link
+              href="/admin"
+              className="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-red-500 transition-colors font-mono text-[11px]"
+            >
+              Admin Panel
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

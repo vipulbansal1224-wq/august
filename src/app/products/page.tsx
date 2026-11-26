@@ -3,10 +3,11 @@
 import React, { useState, useMemo, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Search, SlidersHorizontal, X, PackageCheck } from "lucide-react";
-import { CATEGORIES, PRODUCTS } from "@/data/catalog";
+import { useSiteData } from "@/context/SiteDataContext";
 import ProductCard from "@/components/ProductCard";
 
 function CatalogContent() {
+  const { products: PRODUCTS, categories: CATEGORIES } = useSiteData();
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -35,7 +36,7 @@ function CatalogContent() {
 
   const parentCategories = useMemo(
     () => CATEGORIES.filter((c) => c.parent === 0),
-    []
+    [CATEGORIES]
   );
 
   const childCategoriesByParent = useMemo(() => {
@@ -47,7 +48,7 @@ function CatalogContent() {
       }
     }
     return map;
-  }, []);
+  }, [CATEGORIES]);
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((p) => {
@@ -81,7 +82,7 @@ function CatalogContent() {
 
       return true;
     });
-  }, [selectedCategory, searchQuery, selectedFinish]);
+  }, [selectedCategory, searchQuery, selectedFinish, PRODUCTS]);
 
   const activeCategoryName =
     selectedCategory === "all"
