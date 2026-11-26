@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import {
   Search,
@@ -89,6 +89,73 @@ export default function HomeInteractive() {
   // 3. Interactive Surface Finish Lab
   const [activeFinishIdx, setActiveFinishIdx] = useState(0);
   const activeFinish = COMPANY_INFO.finishes[activeFinishIdx];
+
+  // 4. Hero 4-Tile Auto-Rotating Authentic Product & Facility Slider
+  const sliderPool = useMemo(() => {
+    const prodSlides = PRODUCTS.filter((p) => Boolean(p.image))
+      .slice(0, 16)
+      .map((p) => ({
+        src: p.image,
+        tag: p.specRows?.[0]?.[0] || "ISO 9001:2015",
+        title: p.name,
+        href: `/products/${p.slug}`,
+        isProduct: true,
+      }));
+
+    return [
+      {
+        src: COMPANY_INFO.images.categories["strut-fittings"],
+        tag: "01 / Strut Fittings",
+        title: "Angle, Flat & Z Brackets",
+        href: "/products?category=strut-fittings",
+        isProduct: false,
+      },
+      {
+        src: COMPANY_INFO.images.categories.fasteners,
+        tag: "02 / Fasteners",
+        title: "High-Tensile Bolts, Nuts & Washers",
+        href: "/products?category=fasteners",
+        isProduct: false,
+      },
+      {
+        src: COMPANY_INFO.images.categories.clamps,
+        tag: "03 / Clamps",
+        title: "Beam, Pipe & U-Bolt Clamps",
+        href: "/products?category=clamps",
+        isProduct: false,
+      },
+      {
+        src: COMPANY_INFO.images.factoryFront,
+        tag: "04 / Ludhiana Works",
+        title: "August Industries Pvt. Ltd.",
+        href: "/about-us",
+        isProduct: false,
+      },
+      ...prodSlides,
+    ];
+  }, []);
+
+  const [tileIndices, setTileIndices] = useState([0, 1, 2, 3]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTileIndices((prev) => {
+        const len = sliderPool.length;
+        // Pick 4 distinct randomized indices
+        const next: number[] = [];
+        let attempts = 0;
+        while (next.length < 4 && attempts < 40) {
+          const candidate = Math.floor(Math.random() * len);
+          if (!next.includes(candidate) && candidate !== prev[next.length]) {
+            next.push(candidate);
+          }
+          attempts++;
+        }
+        return next.length === 4 ? next : prev.map((v) => (v + 4) % len);
+      });
+    }, 3500);
+    return () => clearInterval(timer);
+  }, [sliderPool.length]);
 
   return (
     <div className="bg-white text-zinc-900">
@@ -215,80 +282,53 @@ export default function HomeInteractive() {
               </div>
             </div>
 
-            {/* Right Column: Dynamic 4-Tile Industrial Bento Mosaic */}
+            {/* Right Column: Auto-Rotating 4-Tile Industrial Slider Mosaic */}
             <div className="lg:col-span-6">
               <div className="grid grid-cols-12 gap-3.5">
-                <div className="col-span-7 relative rounded-3xl overflow-hidden border border-zinc-200 shadow-lg h-64 group">
-                  <img
-                    src={COMPANY_INFO.images.showcase.cncMachining}
-                    alt="Precision CNC Metal Forming"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-red-400">
-                      01 / Precision Forming
-                    </span>
-                    <p className="text-sm font-bold">
-                      In-House Stamping &amp; Threading
-                    </p>
-                  </div>
-                </div>
-
-                <div className="col-span-5 relative rounded-3xl overflow-hidden border border-zinc-200 shadow-lg h-64 group">
-                  <img
-                    src={COMPANY_INFO.images.showcase.fastenersMacro}
-                    alt="Industrial Fasteners & Bolts"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-red-400">
-                      02 / Fixings
-                    </span>
-                    <p className="text-sm font-bold">High-Tensile Fasteners</p>
-                  </div>
-                </div>
-
-                <div className="col-span-5 relative rounded-3xl overflow-hidden border border-zinc-200 shadow-lg h-56 group">
-                  <img
-                    src={COMPANY_INFO.images.showcase.steelStructure}
-                    alt="Structural Steel & Strut Systems"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-red-400">
-                      03 / MEP &amp; Solar
-                    </span>
-                    <p className="text-sm font-bold">Strut &amp; Beam Clamps</p>
-                  </div>
-                </div>
-
-                <div className="col-span-7 relative rounded-3xl overflow-hidden border border-zinc-200 shadow-lg h-56 group">
-                  <img
-                    src={COMPANY_INFO.images.factoryFront}
-                    alt="August Industries Pvt. Ltd. Factory"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white">
-                    <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-red-400">
-                        04 / Ludhiana Works
-                      </span>
-                      <p className="text-sm font-bold">
-                        August Industries Pvt. Ltd.
-                      </p>
-                    </div>
+                {tileIndices.map((poolIdx, slot) => {
+                  const slide = sliderPool[poolIdx] || sliderPool[0];
+                  const colSpan =
+                    slot === 0 || slot === 3 ? "col-span-7" : "col-span-5";
+                  const heightClass = slot < 2 ? "h-60 sm:h-64" : "h-52 sm:h-56";
+                  return (
                     <Link
-                      href="/about-us"
-                      className="p-2 rounded-full bg-white text-zinc-950 hover:bg-red-600 hover:text-white transition-colors"
+                      key={slot}
+                      href={slide.href}
+                      className={`${colSpan} ${heightClass} relative rounded-3xl overflow-hidden border border-zinc-200 shadow-lg group block ${
+                        slide.isProduct ? "bg-white" : "bg-zinc-900"
+                      }`}
                     >
-                      <ArrowUpRight className="w-4 h-4" />
+                      <img
+                        key={slide.src}
+                        src={slide.src}
+                        alt={slide.title}
+                        className={`w-full h-full transition-all duration-700 group-hover:scale-105 ${
+                          slide.isProduct
+                            ? "object-contain p-5 pb-16"
+                            : "object-cover"
+                        }`}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent pointer-events-none" />
+                      <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-black/55 backdrop-blur-xs text-[9px] font-mono text-zinc-200 flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                        LIVE
+                      </div>
+                      <div className="absolute bottom-3.5 left-4 right-4 flex items-end justify-between gap-2 text-white">
+                        <div className="min-w-0">
+                          <span className="text-[10px] font-mono uppercase tracking-widest text-red-400 block truncate">
+                            {slide.tag}
+                          </span>
+                          <p className="text-xs sm:text-sm font-bold truncate">
+                            {slide.title}
+                          </p>
+                        </div>
+                        <span className="p-1.5 rounded-full bg-white/90 text-zinc-950 group-hover:bg-red-600 group-hover:text-white transition-colors shrink-0">
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
                     </Link>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </div>
