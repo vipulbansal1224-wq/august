@@ -639,26 +639,19 @@ export default function HomeInteractive() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-              <div className="col-span-2 rounded-3xl overflow-hidden border border-zinc-200 shadow-md h-64">
+            <div className="lg:col-span-6 space-y-4">
+              <div className="rounded-3xl overflow-hidden border border-zinc-200 shadow-md h-64">
                 <img
                   src={COMPANY_INFO.images.showcase.warehouseLogistics}
                   alt="Global Export Warehouse & Logistics"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="rounded-2xl overflow-hidden border border-zinc-200 h-44">
+              <div className="rounded-2xl overflow-hidden border border-zinc-200 bg-[#510B18] shadow-sm">
                 <img
                   src={COMPANY_INFO.images.heroSlides[1]}
-                  alt="August Industries Strut Hardware"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden border border-zinc-200 h-44">
-                <img
-                  src={COMPANY_INFO.images.heroSlides[2]}
-                  alt="August Industries Precision Fittings"
-                  className="w-full h-full object-cover"
+                  alt="Cantilever Arms - Solid, Slotted and Back to Back Strut"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>

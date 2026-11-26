@@ -96,17 +96,21 @@ export default function AboutUsPage() {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src={COMPANY_INFO.images.heroSlides[1]}
-                  alt="August Industries Manufacturing"
-                  className="rounded-2xl border border-slate-200 h-44 w-full object-cover"
-                />
-                <img
-                  src={COMPANY_INFO.images.heroSlides[2]}
-                  alt="August Industries Warehouse"
-                  className="rounded-2xl border border-slate-200 h-44 w-full object-cover"
-                />
+              <div className="space-y-4">
+                <div className="rounded-2xl overflow-hidden border border-zinc-200 bg-[#510B18]">
+                  <img
+                    src={COMPANY_INFO.images.heroSlides[1]}
+                    alt="Cantilever Arms - August Industries"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+                <div className="rounded-2xl overflow-hidden border border-zinc-200 bg-[#111113]">
+                  <img
+                    src={COMPANY_INFO.images.heroSlides[2]}
+                    alt="August Industries Product Range"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>

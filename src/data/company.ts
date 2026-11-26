@@ -31,7 +31,8 @@ export const COMPANY_INFO = {
       "strut-fittings": "/images/cat-strut.jpg",
       fasteners: "/images/cat-fasteners.jpg",
       clamps: "/images/cat-clamps.jpg",
-      "strut-channel": "/images/hero-2.jpg",
+      "strut-channel":
+        "https://augustindustry.com/wp-content/uploads/2023/03/slotted-cantilever-arm-two-hole-150-mm-hdg-box-of-one-piece.jpg",
     },
   },
   about: {
