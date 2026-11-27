@@ -167,7 +167,7 @@ export default function AdminPanelPage() {
       setIsAuthed(true);
       setAuthError("");
     } else {
-      setAuthError("Invalid passcode. Use demo passcode: august1998");
+      setAuthError("Invalid passcode. Please try again.");
     }
   };
 
@@ -216,13 +216,6 @@ export default function AdminPanelPage() {
               Unlock Admin Panel
             </button>
           </form>
-
-          <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 text-xs text-zinc-600 flex items-center justify-between">
-            <span>Demo Passcode:</span>
-            <code className="font-mono font-bold text-zinc-950 bg-white px-2 py-0.5 rounded border border-zinc-200">
-              august1998
-            </code>
-          </div>
         </div>
       </div>
     );
