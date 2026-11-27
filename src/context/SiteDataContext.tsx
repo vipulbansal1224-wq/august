@@ -105,7 +105,7 @@ const DEFAULT_STATE: SiteDataState = {
   content: DEFAULT_CONTENT,
 };
 
-const STORAGE_KEY = "august_cms_data_v1";
+const STORAGE_KEY = "august_cms_data_v2";
 
 const SiteDataContext = createContext<SiteDataContextType | undefined>(undefined);
 

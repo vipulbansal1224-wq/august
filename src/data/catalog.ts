@@ -168,7 +168,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI022.png",
+    "image": "/images/products/AI022.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -200,7 +200,7 @@ export const PRODUCTS: Product[] = [
       "clamps",
       "window-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI048.jpg",
+    "image": "/images/products/AI048.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -230,7 +230,7 @@ export const PRODUCTS: Product[] = [
       "clamps",
       "window-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI047.jpg",
+    "image": "/images/products/AI047.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -260,7 +260,7 @@ export const PRODUCTS: Product[] = [
       "clamps",
       "window-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI044.png",
+    "image": "/images/products/AI044.png",
     "description": "",
     "specHeaders": [
       "Size",
@@ -290,7 +290,7 @@ export const PRODUCTS: Product[] = [
       "beam-clamp",
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/AI043.png",
+    "image": "/images/products/AI043.png",
     "description": "",
     "specHeaders": [
       "Size",
@@ -320,7 +320,7 @@ export const PRODUCTS: Product[] = [
       "beam-clamp",
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI042.jpg",
+    "image": "/images/products/AI042.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -350,7 +350,7 @@ export const PRODUCTS: Product[] = [
       "beam-clamp",
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI041.jpg",
+    "image": "/images/products/AI041.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -380,7 +380,7 @@ export const PRODUCTS: Product[] = [
       "beam-clamp",
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI040.png",
+    "image": "/images/products/AI040.png",
     "description": "",
     "specHeaders": [
       "Size",
@@ -408,7 +408,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/end-caps.jpg",
+    "image": "/images/products/end-caps.jpg",
     "description": "",
     "specHeaders": [
       "Color",
@@ -436,7 +436,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/saddle-clamps.jpg",
+    "image": "/images/products/saddle-clamps.jpg",
     "description": "",
     "specHeaders": [],
     "specRows": [],
@@ -452,7 +452,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/strut-clamps.jpg",
+    "image": "/images/products/strut-clamps.jpg",
     "description": "",
     "specHeaders": [],
     "specRows": [],
@@ -470,7 +470,7 @@ export const PRODUCTS: Product[] = [
       "bracket-with-u-bolt",
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI046.png",
+    "image": "/images/products/AI046.png",
     "description": "",
     "specHeaders": [
       "Size",
@@ -500,7 +500,7 @@ export const PRODUCTS: Product[] = [
       "bracket-with-u-bolt",
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI045.png",
+    "image": "/images/products/AI045.png",
     "description": "",
     "specHeaders": [
       "Size",
@@ -528,7 +528,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI072.jpg",
+    "image": "/images/products/AI072.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -556,7 +556,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/AI077.jpg",
+    "image": "/images/products/AI077.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -584,7 +584,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/Purlin-Clip.jpg",
+    "image": "/images/products/Purlin-Clip.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -612,7 +612,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "clamps"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI076.jpg",
+    "image": "/images/products/AI076.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -640,7 +640,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "nuts"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/Wedge-Nuts-2.jpg",
+    "image": "/images/products/Wedge-Nuts-2.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -668,7 +668,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "nuts"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/Wedge-Nuts-2.jpg",
+    "image": "/images/products/Wedge-Nuts-2.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -696,7 +696,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "nuts"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/Wedge-Nuts.jpg",
+    "image": "/images/products/Wedge-Nuts.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -724,7 +724,7 @@ export const PRODUCTS: Product[] = [
     "categorySlugs": [
       "nuts"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/Hex-Nuts.jpg",
+    "image": "/images/products/Hex-Nuts.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -754,7 +754,7 @@ export const PRODUCTS: Product[] = [
       "fasteners",
       "washers"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/Clip-Washer.jpg",
+    "image": "/images/products/Clip-Washer.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -784,7 +784,7 @@ export const PRODUCTS: Product[] = [
       "fasteners",
       "washers"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/Clip-Washer.jpg",
+    "image": "/images/products/Clip-Washer.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -814,7 +814,7 @@ export const PRODUCTS: Product[] = [
       "fasteners",
       "washers"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/Penny-washer-2.jpg",
+    "image": "/images/products/Penny-washer-2.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -844,7 +844,7 @@ export const PRODUCTS: Product[] = [
       "fasteners",
       "washers"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/Penny-washer-2.jpg",
+    "image": "/images/products/Penny-washer-2.jpg",
     "description": "",
     "specHeaders": [
       "Size",
@@ -874,7 +874,7 @@ export const PRODUCTS: Product[] = [
       "fasteners",
       "flat-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/square-washer.jpg",
+    "image": "/images/products/square-washer.jpg",
     "description": "",
     "specHeaders": [
       "Thickness",
@@ -906,7 +906,7 @@ export const PRODUCTS: Product[] = [
       "bolts",
       "fasteners"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/stud-bolt.jpg",
+    "image": "/images/products/stud-bolt.jpg",
     "description": "A channel nut without a spring is a type of fastener used in the construction industry to attach threaded rod or other hardware to channel strut. It is also known as a plain channel nut. Unlike a channel nut with a spring, which has a built-in spring that provides constant pressure and grip, a plain channel nut does not have a spring and relies on the friction between the nut and the channel strut to stay in place.",
     "specHeaders": [],
     "specRows": [],
@@ -924,7 +924,7 @@ export const PRODUCTS: Product[] = [
       "bolts",
       "fasteners"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/Roofing-Bolts.jpg",
+    "image": "/images/products/Roofing-Bolts.jpg",
     "description": "A channel nut without a spring is a type of fastener used in the construction industry to attach threaded rod or other hardware to channel strut. It is also known as a plain channel nut. Unlike a channel nut with a spring, which has a built-in spring that provides constant pressure and grip, a plain channel nut does not have a spring and relies on the friction between the nut and the channel strut to stay in place.",
     "specHeaders": [],
     "specRows": [],
@@ -942,7 +942,7 @@ export const PRODUCTS: Product[] = [
       "bolts",
       "fasteners"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/Hex-Head-Set-Screws.jpg",
+    "image": "/images/products/Hex-Head-Set-Screws.jpg",
     "description": "A channel nut without a spring is a type of fastener used in the construction industry to attach threaded rod or other hardware to channel strut. It is also known as a plain channel nut. Unlike a channel nut with a spring, which has a built-in spring that provides constant pressure and grip, a plain channel nut does not have a spring and relies on the friction between the nut and the channel strut to stay in place.",
     "specHeaders": [],
     "specRows": [],
@@ -960,7 +960,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "strut-joiners"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI052.jpg",
+    "image": "/images/products/AI052.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -992,7 +992,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "strut-joiners"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI051.jpg",
+    "image": "/images/products/AI051.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1024,7 +1024,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "strut-joiners"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI050.png",
+    "image": "/images/products/AI050.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1056,7 +1056,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "strut-joiners"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI049.png",
+    "image": "/images/products/AI049.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1088,7 +1088,7 @@ export const PRODUCTS: Product[] = [
       "channel-base",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI071.jpg",
+    "image": "/images/products/AI071.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1120,7 +1120,7 @@ export const PRODUCTS: Product[] = [
       "channel-base",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI070.jpg",
+    "image": "/images/products/AI070.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1152,7 +1152,7 @@ export const PRODUCTS: Product[] = [
       "channel-base",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/FB64-2.jpg",
+    "image": "/images/products/FB64-2.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1184,7 +1184,7 @@ export const PRODUCTS: Product[] = [
       "channel-base",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/FB63.jpg",
+    "image": "/images/products/FB63.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1216,7 +1216,7 @@ export const PRODUCTS: Product[] = [
       "channel-base",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI036.jpg",
+    "image": "/images/products/AI036.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1248,7 +1248,7 @@ export const PRODUCTS: Product[] = [
       "channel-base",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI035.jpg",
+    "image": "/images/products/AI035.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1280,7 +1280,7 @@ export const PRODUCTS: Product[] = [
       "channel-base",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI034.jpg",
+    "image": "/images/products/AI034.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1312,7 +1312,7 @@ export const PRODUCTS: Product[] = [
       "c-bracket",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI033.png",
+    "image": "/images/products/AI033.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1344,7 +1344,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "u-shape-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI032.png",
+    "image": "/images/products/AI032.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1376,7 +1376,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "u-shape-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI030.png",
+    "image": "/images/products/AI030.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1408,7 +1408,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "u-shape-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI031.png",
+    "image": "/images/products/AI031.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1440,7 +1440,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "u-shape-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI029.png",
+    "image": "/images/products/AI029.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1472,7 +1472,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "z-brackets-strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI027.png",
+    "image": "/images/products/AI027.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1504,7 +1504,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "z-brackets-strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI028.jpg",
+    "image": "/images/products/AI028.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1536,7 +1536,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "z-brackets-strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/ai026.png",
+    "image": "/images/products/ai026.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1568,7 +1568,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "wing-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI068.jpg",
+    "image": "/images/products/AI068.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1598,7 +1598,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "wing-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI067.png",
+    "image": "/images/products/AI067.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1628,7 +1628,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "wing-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI066.png",
+    "image": "/images/products/AI066.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1660,7 +1660,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "wing-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/04/AI065-1.png",
+    "image": "/images/products/AI065-1.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1692,7 +1692,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "wing-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI064.png",
+    "image": "/images/products/AI064.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1724,7 +1724,7 @@ export const PRODUCTS: Product[] = [
       "strut-fittings",
       "wing-brackets"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI039.png",
+    "image": "/images/products/AI039.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1756,7 +1756,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/hinge-brackets-bzp-box-of-25-pcs-1.jpg",
+    "image": "/images/products/hinge-brackets-bzp-box-of-25-pcs-1.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1788,7 +1788,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/45-Deg-Angle-Tee-centre-FB125-P1032-1.png",
+    "image": "/images/products/45-Deg-Angle-Tee-centre-FB125-P1032-1.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1820,7 +1820,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI024.png",
+    "image": "/images/products/AI024.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1850,7 +1850,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI023.jpg",
+    "image": "/images/products/AI023.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1882,7 +1882,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI022A.png",
+    "image": "/images/products/AI022A.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1914,7 +1914,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/ai023.png",
+    "image": "/images/products/ai023.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1946,7 +1946,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI020.png",
+    "image": "/images/products/AI020.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -1978,7 +1978,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI019.png",
+    "image": "/images/products/AI019.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2010,7 +2010,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI018.png",
+    "image": "/images/products/AI018.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2042,7 +2042,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI017.png",
+    "image": "/images/products/AI017.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2074,7 +2074,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI016.png",
+    "image": "/images/products/AI016.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2106,7 +2106,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI014.jpg",
+    "image": "/images/products/AI014.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2138,7 +2138,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI012.png",
+    "image": "/images/products/AI012.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2170,7 +2170,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI011.png",
+    "image": "/images/products/AI011.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2202,7 +2202,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI009.png",
+    "image": "/images/products/AI009.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2234,7 +2234,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI013.png",
+    "image": "/images/products/AI013.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2266,7 +2266,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI015.png",
+    "image": "/images/products/AI015.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2298,7 +2298,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI010.png",
+    "image": "/images/products/AI010.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2330,7 +2330,7 @@ export const PRODUCTS: Product[] = [
       "angle-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI008.png",
+    "image": "/images/products/AI008.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2362,7 +2362,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI055.jpg",
+    "image": "/images/products/AI055.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2394,7 +2394,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI007.png",
+    "image": "/images/products/AI007.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2426,7 +2426,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI006.png",
+    "image": "/images/products/AI006.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2458,7 +2458,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI054.png",
+    "image": "/images/products/AI054.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2490,7 +2490,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI005.png",
+    "image": "/images/products/AI005.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2522,7 +2522,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI004.png",
+    "image": "/images/products/AI004.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2554,7 +2554,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI003.png",
+    "image": "/images/products/AI003.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2586,7 +2586,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/AI002.png",
+    "image": "/images/products/AI002.png",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2618,7 +2618,7 @@ export const PRODUCTS: Product[] = [
       "flat-brackets",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/001.jpg",
+    "image": "/images/products/001.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2650,7 +2650,7 @@ export const PRODUCTS: Product[] = [
       "cantilever-arms",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/back-to-back-cantilever-arm-two-hole-150-mm-hdg-1.jpg",
+    "image": "/images/products/back-to-back-cantilever-arm-two-hole-150-mm-hdg-1.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2708,7 +2708,7 @@ export const PRODUCTS: Product[] = [
       "cantilever-arms",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/slotted-cantilever-arm-two-hole-150-mm-hdg-box-of-one-piece.jpg",
+    "image": "/images/products/slotted-cantilever-arm-two-hole-150-mm-hdg-box-of-one-piece.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2766,7 +2766,7 @@ export const PRODUCTS: Product[] = [
       "cantilever-arms",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/cantilever-arm-two-hole-150-mm-hdg-box-of-one-piece.jpg",
+    "image": "/images/products/cantilever-arm-two-hole-150-mm-hdg-box-of-one-piece.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2824,7 +2824,7 @@ export const PRODUCTS: Product[] = [
       "channel-nuts",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/quick-channel-nut.jpg",
+    "image": "/images/products/quick-channel-nut.jpg",
     "description": "",
     "specHeaders": [
       "Part No",
@@ -2863,7 +2863,7 @@ export const PRODUCTS: Product[] = [
       "channel-nuts",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/channel-nuts-long-spring-1-1.jpg",
+    "image": "/images/products/channel-nuts-long-spring-1-1.jpg",
     "description": "Channel nuts are also often known as spring nuts, strut nuts, zebs or zebedees . They are manufactured to the highest quality and are available in a range of from M6 to M12. Don’t forget to order your setscrews or threaded rod to use with these channel nuts!",
     "specHeaders": [],
     "specRows": [],
@@ -2881,7 +2881,7 @@ export const PRODUCTS: Product[] = [
       "channel-nuts",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/channel-nuts-short-spring-1.jpg",
+    "image": "/images/products/channel-nuts-short-spring-1.jpg",
     "description": "Short Spring Nuts are manufactured with a spring and serrated grooves that grip the lip of the strut channel. This provides a secure mounting point for screws or bolts. Short spring nuts are intended to be used in shallow channel.",
     "specHeaders": [],
     "specRows": [],
@@ -2899,7 +2899,7 @@ export const PRODUCTS: Product[] = [
       "channel-nuts",
       "strut-fittings"
     ],
-    "image": "https://augustindustry.com/wp-content/uploads/2023/03/channel-nut-without-spring.jpg",
+    "image": "/images/products/channel-nut-without-spring.jpg",
     "description": "A channel nut without a spring is a type of fastener used in the construction industry to attach threaded rod or other hardware to channel strut. It is also known as a plain channel nut. Unlike a channel nut with a spring, which has a built-in spring that provides constant pressure and grip, a plain channel nut does not have a spring and relies on the friction between the nut and the channel strut to stay in place.",
     "specHeaders": [],
     "specRows": [],

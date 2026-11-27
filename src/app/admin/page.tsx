@@ -912,14 +912,37 @@ export default function AdminPanelPage() {
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-zinc-700 mb-1">
-                    Image URL
+                    Image Path / Upload
                   </label>
-                  <input
-                    type="text"
-                    value={formImage}
-                    onChange={(e) => setFormImage(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-xl border border-zinc-300 text-xs"
-                  />
+                  <div className="flex gap-1.5">
+                    <input
+                      type="text"
+                      value={formImage}
+                      onChange={(e) => setFormImage(e.target.value)}
+                      placeholder="/images/products/..."
+                      className="flex-1 px-3.5 py-2 rounded-xl border border-zinc-300 text-xs font-mono"
+                    />
+                    <label className="px-3 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200 border border-zinc-300 text-xs font-bold text-zinc-800 cursor-pointer shrink-0 flex items-center gap-1">
+                      <Upload className="w-3.5 h-3.5" />
+                      Upload
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0];
+                          if (!file) return;
+                          const reader = new FileReader();
+                          reader.onload = () => {
+                            if (typeof reader.result === "string") {
+                              setFormImage(reader.result);
+                            }
+                          };
+                          reader.readAsDataURL(file);
+                        }}
+                      />
+                    </label>
+                  </div>
                 </div>
               </div>
 
